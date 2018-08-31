@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <style>
+        main{
+            display:grid;
+            grid-gap: 10px;
+
+        }
+        main div{
+            border:2px solid #ccc;
+            padding: 10px;
+        }
+
+        .item1{
+            background: #246;
+            grid-row: 3 / 4;
+        }
+
+        @media screen and (min-width: 480px){
+
+
+            main{
+                grid-template-columns: repeat(4, 1fr);
+
+            }
+
+            main div:nth-child(1){
+               grid-column: 2 /span 3;
+                grid-row:1 / 2;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <div class="item1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla ducimus molestias natus, laudantium minima vero nostrum laboriosam quae possimus voluptas culpa cum libero atque pariatur, porro soluta quod! In, accusantium.</div>
+        <div class="item2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae nam minima mollitia, quae enim hic voluptatibus quam maiores commodi impedit, deserunt dolore autem. Provident est veniam fuga autem, voluptatibus sapiente!</div>
+        <div class="item3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, natus eum, aperiam facilis quisquam, repellat, modi vel ut quibusdam iure nesciunt totam? Animi eligendi, sed ipsa quas nulla beatae, asperiores.</div>
+        <div class="item4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui reprehenderit, optio ea ab id possimus laudantium nesciunt. Aspernatur culpa nesciunt cum numquam quibusdam, provident dolores deserunt ipsam dolorem mollitia quia.</div>
+        <div class="item5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad nam, voluptates suscipit, alias, dicta temporibus dolorum cumque pariatur soluta ipsum debitis eaque? Vel ut nihil, tenetur, labore maiores minima rerum!</div>
+        <div class="item6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quo doloribus, ut nemo illum unde dolore sapiente vero distinctio at! Architecto incidunt sint, ipsum quos accusamus perferendis ducimus tempore non.</div>
+        <div class="item7">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt earum maiores doloribus porro, magnam unde culpa officiis pariatur nostrum saepe adipisci architecto animi ea rerum sapiente aut, delectus repellat similique!</div>
+        <div class="item8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem molestiae, architecto ad laborum aut reiciendis saepe dicta numquam at qui non ipsam perspiciatis debitis corporis dolorum quod sit iusto provident!</div>
+        <div class="item9">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem iusto magni minima harum nostrum vitae ipsam. Reprehenderit sunt ipsum dolore quibusdam quos quo sapiente ipsa, corporis nostrum cumque eius repellat.</div>
+    </main>
+
+</body>
+</html>
