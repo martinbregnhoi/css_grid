@@ -1,71 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Css Grid</title>
-<style>
+    <meta charset="UTF-8">
+    <title>Css Grid</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-    *{
-        box-sizing: border-box;
-    }
-    body{
-        margin:0;
-    }
+        body {
+            margin: 0;
+        }
 
         .container {
             height: 100vh;
-            display:grid;
+            display: grid;
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: 150px auto 150px;
-
+            grid-template-areas: "header header header header" "sidebar main main main" "footer footer footer footer";
         }
 
         .item {
             border: 2px solid #fff;
         }
 
-    .item-a{
-        background:#c6a51b;
-        grid-column: 1 / span 4;
-    }
-      .item-b{
-        background:#396c14;
-          grid-column: 1/span 4;
-          display:grid;
-          grid-template-columns: repeat(4, 1fr);
-          grid-gap: 20px;
-          padding: 20px;
+        .item-a {
+            background: #c6a51b;
+/*                    grid-column: 1 / span 4;*/
+            grid-area: header;
+        }
+
+        .item-b {
+            background: #396c14;
+/*                      grid-column: 1/span 4;*/
+            grid-area: main;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            padding: 20px;
 
 
-    }
-      .item-c{
-        background:#c42323;
-        grid-column: 1/span 4;
-    }
+        }
 
-      .item-d{
-        background:#157a91;
+        .item-c {
+            background: #c42323;
+/*                    grid-column: 1/span 4;*/
+            grid-area: footer;
+        }
 
-    }
+        .item-d {
+            background: #157a91;
 
-    .item
+
+        }
+.item-e {
+            background: #157a91;
+grid-area: sidebar;
+        }
+
 
     </style>
 </head>
-<body>
-<div class="container">
-<div class="item item-a">A</div>
-<div class="item item-b">
-<div class="item item-d">D</div>
-<div class="item item-d">D</div>
-<div class="item item-d">D</div>
-<div class="item item-d">D</div>
-<div class="item item-d">D</div>
-<div class="item item-d">D</div>
-<div class="item item-d">D</div>
-<div class="item item-d">D</div></div>
-<div class="item item-c">C</div>
 
-</div>
+<body>
+    <div class="container">
+        <div class="item item-a">A</div>
+        <div class="item item-b">
+            <div class="item item-d">D</div>
+            <div class="item item-d">D</div>
+            <div class="item item-d">D</div>
+            <div class="item item-d">D</div>
+            <div class="item item-d">D</div>
+            <div class="item item-d">D</div>
+            <div class="item item-d">D</div>
+            <div class="item item-d">D</div>
+            <div class="item item-d">D</div>
+            <div class="item item-d">D</div>
+            <div class="item item-d">D</div>
+            <div class="item item-d">D</div>
+        </div>
+        <div class="item item-c">C</div>
+        <div class="item item-e">E</div>
+
+
+    </div>
 </body>
 </html>
